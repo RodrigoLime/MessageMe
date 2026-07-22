@@ -29,3 +29,8 @@ $(document).on('turbolinks:load', function() {
   });
   scroll_bottom();
 })
+
+// Clear the message input after the message is sent successfully
+$(document).on('ajax:success', '.reply.form', function() {
+  this.reset();
+});
